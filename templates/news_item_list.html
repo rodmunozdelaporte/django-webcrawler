@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<table class="table">
+	<thead>
+		<th class="col">Fuente</th>
+		<th class="col">Titulo</th>
+		<th class="col">Publicado</th>
+	</thead>
+	<tbody>
+		{% for item in object_list %}
+		<tr>
+			<th scope="row">{{ item.fuente }} </th>
+			<td><a href="{{ item.link }}">{{ item.titulo }}</a></td>
+			<td>{{ item.fecha_publicado }}</td>
+		</tr>	
+		{% endfor %}
+	</tbody>
+</table>
+
+
+{% endblock content %}
